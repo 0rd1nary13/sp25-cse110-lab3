@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Meeting minutes for Pomodoro Timer First Brainstorm">
+    <title>Pomodoro Timer First Brainstorm</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <h1>Pomodoro Timer First Brainstorm</h1>
+      <h2>Brainstorming</h2>
+      <h3>Date: 2025-04-09</h3>
+    </header>
+
+    <nav>
+      <a href="#attendance">Attendance</a> |
+      <a href="#agenda">Agenda</a> |
+      <a href="#unfinished">Unfinished Business</a> |
+      <a href="#new">New Business</a> |
+      <a href="#misc">Miscellaneous</a>
+    </nav>
+
+    <main>
+      <section id="attendance">
+        <h2>Attendance</h2>
+        <ul>
+          <li><strong>Attendee1</strong> - Project Manager</li>
+          <li><strong>Attendee2</strong> - Lead Developer</li>
+          <li><strong>Attendee3</strong> - UI/UX Designer</li>
+        </ul>
+      </section>
+
+      <section id="agenda">
+        <h2>Agenda</h2>
+        <ol>
+          <li>Review project requirements</li>
+          <li>Discuss UI/UX design concepts</li>
+          <li>Plan development timeline</li>
+          <li>Assign initial tasks</li>
+        </ol>
+      </section>
+
+      <section id="unfinished">
+        <h2>Unfinished Business</h2>
+        <p>No unfinished business from previous meeting.</p>
+      </section>
+
+      <section id="new">
+        <h2>New Business</h2>
+        <ul>
+          <li>Project kickoff and team introductions</li>
+          <li>Initial feature brainstorming</li>
+          <li>Technology stack discussion</li>
+        </ul>
+      </section>
+
+      <section id="misc">
+        <h2>Miscellaneous</h2>
+        <p><em>Attendee2</em> suggested using <b>React</b> for the frontend.</p>
+        <p><em>Attendee3</em> proposed a <i>minimalist design</i> approach.</p>
+      </section>
+
+      <section id="diagrams">
+        <h2>Whiteboard Diagrams</h2>
+        <img src="diagram.jpg" alt="Initial system architecture diagram" width="500">
+      </section>
+
+      <section id="recordings">
+        <h2>Meeting Recordings</h2>
+        <audio controls>
+          <source src="audio1139513096.m4a" type="audio/mp4">
+          Your browser does not support the audio element.
+        </audio>
+        <br>
+        <video width="320" height="240" controls>
+          <source src="video2139513096.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </section>
+    </main>
+
+    <hr>
+
+    <form>
+      <fieldset>
+        <legend>Meeting Feedback Form</legend>
+        
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+        </div>
+
+        <div>
+          <label for="date">Meeting Date:</label>
+          <input type="date" id="date" name="date">
+        </div>
+
+        <div>
+          <label>Meeting Type:</label>
+          <input type="radio" id="brainstorm" name="meeting_type" value="brainstorm">
+          <label for="brainstorm">Brainstorm</label>
+          <input type="radio" id="review" name="meeting_type" value="review">
+          <label for="review">Review</label>
+        </div>
+
+        <div>
+          <label>Topics Covered:</label>
+          <input type="checkbox" id="design" name="topics" value="design">
+          <label for="design">Design</label>
+          <input type="checkbox" id="development" name="topics" value="development">
+          <label for="development">Development</label>
+        </div>
+
+        <div>
+          <label for="feedback">Feedback:</label>
+          <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+          <label for="role">Role:</label>
+          <select id="role" name="role">
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="manager">Manager</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="browser">Preferred Browser:</label>
+          <input list="browsers" id="browser" name="browser">
+          <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+          </datalist>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+      </fieldset>
+    </form>
+
+    <footer>
+      <p>© 2025 Team Pomodoro. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
