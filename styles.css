@@ -1,0 +1,383 @@
+/* 
+ * Main CSS file for the Pomodoro Timer Team Meeting Minutes
+ * This file demonstrates various CSS properties and selectors as required for Lab 3
+ */
+
+/* CSS Variables with fallbacks */
+:root {
+  --primary-color: #546e7a;
+  --secondary-color: #78909c;
+  --text-color: #263238;
+  --background-color: #eceff1;
+  --accent-color: #607d8b;
+  --font-main: 'Roboto', sans-serif;
+  --font-headings: 'Montserrat', sans-serif;
+  --spacing-unit: 1rem;
+  --section-bg: #f5f5f5;
+}
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@500;700&display=swap');
+
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Element Selector */
+body {
+  font-family: var(--font-main, Arial);
+  color: var(--text-color, #333);
+  background-color: #e0e0e0;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Element Selector */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1em;
+  background-color: rgba(84, 110, 122, 0.1);
+  border-radius: 8px;
+}
+
+/* Element Selector with RGB color */
+h1 {
+  color: rgb(55, 71, 79);
+  margin-bottom: 0.5em;
+  font-family: var(--font-headings, Arial);
+}
+
+/* Element Selector with hex color */
+h2 {
+  color: #455a64;
+  margin: 1em 0 0.5em 0;
+  font-family: var(--font-headings, Arial);
+}
+
+/* Element Selector with HSL color */
+h3 {
+  color: hsl(200, 13%, 30%);
+  font-weight: normal;
+  font-family: var(--font-headings, Arial);
+}
+
+/* Element Selector with color name */
+p {
+  color: #37474f;
+  margin-bottom: 1em;
+}
+
+/* Attribute Selector */
+[href^="#"] {
+  color: var(--primary-color, blue);
+  text-decoration: none;
+}
+
+/* ID Selector */
+#attendance {
+  border-left: 5px solid var(--secondary-color, green);
+  padding-left: 1em;
+}
+
+/* Class Selector */
+.highlight {
+  background-color: #fffacd;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+}
+
+/* Pseudo-class Selector */
+a:hover {
+  text-decoration: underline;
+  color: #455a64;
+}
+
+/* Pseudo-class Selector */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Combining Two Selectors */
+section.important {
+  border: 2px solid var(--accent-color, red);
+}
+
+/* Selector List */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* Descendant Combinator */
+nav a {
+  margin: 0 0.5em;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+}
+
+/* Child Combinator */
+section > h2 {
+  border-bottom: 2px solid var(--primary-color, blue);
+  padding-bottom: 0.3em;
+  width: 100%;
+}
+
+/* General Sibling Combinator */
+h2 ~ p {
+  padding-left: 1em;
+}
+
+/* Adjacent Sibling Combinator */
+h2 + ul {
+  margin-top: 0.5em;
+  list-style-type: square;
+}
+
+/* New :has() selector */
+li:has(strong) {
+  font-weight: 500;
+}
+
+/* Nested Selector */
+nav {
+  background-color: #cfd8dc;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 2em;
+
+  & a {
+    display: inline-block;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: #b0bec5;
+    }
+  }
+}
+
+/* Main Content Styling */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
+  margin-bottom: 3em;
+}
+
+/* Flexbox Layout */
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5em;
+  background-color: var(--section-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+/* Box Model - Margins (shorthand) */
+form {
+  margin: 2em 1em 3em 1em;
+}
+
+/* Box Model - Margins (longhand) */
+fieldset {
+  margin-top: 1em;
+  margin-right: 0;
+  margin-bottom: 1em;
+  margin-left: 0;
+}
+
+/* Box Model - Padding (shorthand) */
+form div {
+  padding: 10px 15px 10px 15px;
+}
+
+/* Box Model - Padding (longhand) */
+footer {
+  padding-top: 2em;
+  padding-right: 1em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  text-align: center;
+}
+
+/* Box Model - Border (shorthand) */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Box Model - Border (longhand) */
+legend {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  border-radius: 3px;
+  padding: 0.3em 0.6em;
+}
+
+/* Display Property */
+nav a {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Sizing */
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  min-width: 250px;
+  max-width: 320px;
+}
+
+/* Position */
+footer {
+  position: relative;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color, blue);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* Wider-gamut color */
+button {
+  background-color: color(display-p3 0.33 0.43 0.48);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+/* Color mixing */
+textarea:focus {
+  border-color: color-mix(in srgb, var(--primary-color) 50%, var(--secondary-color) 50%);
+  outline: none;
+}
+
+/* Units - Relative */
+input[type="text"], 
+input[type="date"], 
+select, 
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.25em;
+  border: 1px solid #ddd;
+  border-radius: 0.25em;
+  font-size: 1rem;
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+/* Units - Absolute */
+hr {
+  height: 2px;
+  background-color: #eee;
+  border: none;
+  margin: 20px 0;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+}
+
+fieldset {
+  padding: 15px;
+}
+
+/* Moved from internal CSS */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.form-row > div {
+  flex: 1 1 300px;
+}
+
+#recordings {
+  text-align: center;
+}
+
+#recordings audio, #recordings video {
+  margin: 1em auto;
+}
+
+/* Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+h1:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  
+  nav {
+    flex-direction: column;
+    
+    & a {
+      margin: 0.2em 0;
+    }
+  }
+  
+  body {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  form div {
+    padding: 8px;
+  }
+  
+  video, audio {
+    width: 100%;
+  }
+} 
