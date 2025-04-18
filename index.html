@@ -5,6 +5,8 @@
     <meta name="description" content="Meeting minutes for Pomodoro Timer First Brainstorm">
     <title>Pomodoro Timer First Brainstorm</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
@@ -46,7 +48,7 @@
         <p>No unfinished business from previous meeting.</p>
       </section>
 
-      <section id="new">
+      <section id="new" class="important">
         <h2>New Business</h2>
         <ul>
           <li>Project kickoff and team introductions</li>
@@ -82,18 +84,21 @@
 
     <hr>
 
-    <form>
+    <!-- Inline CSS examples -->
+    <form style="background-color: #1c272c; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.3);">
       <fieldset>
-        <legend>Meeting Feedback Form</legend>
+        <legend style="background-color: var(--accent-color); color: #232f34; padding: 5px 10px; font-weight: bold;">Meeting Feedback Form</legend>
         
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name">
-        </div>
+        <div class="form-row">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+          </div>
 
-        <div>
-          <label for="date">Meeting Date:</label>
-          <input type="date" id="date" name="date">
+          <div>
+            <label for="date">Meeting Date:</label>
+            <input type="date" id="date" name="date">
+          </div>
         </div>
 
         <div>
@@ -117,24 +122,26 @@
           <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
         </div>
 
-        <div>
-          <label for="role">Role:</label>
-          <select id="role" name="role">
-            <option value="developer">Developer</option>
-            <option value="designer">Designer</option>
-            <option value="manager">Manager</option>
-          </select>
-        </div>
+        <div class="form-row">
+          <div>
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="manager">Manager</option>
+            </select>
+          </div>
 
-        <div>
-          <label for="browser">Preferred Browser:</label>
-          <input list="browsers" id="browser" name="browser">
-          <datalist id="browsers">
-            <option value="Chrome">
-            <option value="Firefox">
-            <option value="Safari">
-            <option value="Edge">
-          </datalist>
+          <div>
+            <label for="browser">Preferred Browser:</label>
+            <input list="browsers" id="browser" name="browser">
+            <datalist id="browsers">
+              <option value="Chrome">
+              <option value="Firefox">
+              <option value="Safari">
+              <option value="Edge">
+            </datalist>
+          </div>
         </div>
 
         <button type="submit">Submit Feedback</button>
@@ -143,6 +150,7 @@
 
     <footer>
       <p>© 2025 Team Pomodoro. All rights reserved.</p>
+      <a href="#" class="back-to-top">↑</a>
     </footer>
   </body>
 </html>
